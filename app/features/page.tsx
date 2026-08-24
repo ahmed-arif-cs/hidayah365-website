@@ -1,48 +1,59 @@
 import Reveal from "@/components/Reveal";
+import {
+  BookOpen,
+  Clock,
+  Compass,
+  HandHeart,
+  Library,
+  Target,
+  Trophy,
+  Bell,
+  Calendar,
+} from "lucide-react";
 
 const features = [
   {
-    icon: "\u{1F4D6}",
+    icon: BookOpen,
     title: "Complete Quran",
     desc: "Read the entire Quran with Arabic text, translations in multiple languages, and detailed tafseer.",
   },
   {
-    icon: "\u{1F54C}",
+    icon: Clock,
     title: "Prayer Times",
     desc: "Accurate prayer times calculated based on your location with multiple calculation methods.",
   },
   {
-    icon: "\u{1F9ED}",
+    icon: Compass,
     title: "Qibla Direction",
     desc: "Find the Qibla direction accurately using your device's compass and GPS.",
   },
   {
-    icon: "\u{1F4FF}",
+    icon: HandHeart,
     title: "Duas & Dhikr",
     desc: "Comprehensive collection of duas and dhikr for all occasions with translations.",
   },
   {
-    icon: "\u{1F4DA}",
+    icon: Library,
     title: "Hadith Collection",
     desc: "Access authentic hadith collections with search functionality and categorization.",
   },
   {
-    icon: "\u{1F3AF}",
+    icon: Target,
     title: "Tasbeeh Counter",
     desc: "Digital tasbeeh counter to keep track of your dhikr and set daily goals.",
   },
   {
-    icon: "\u{1F947}",
+    icon: Trophy,
     title: "Khatm Tracker",
     desc: "Track your progress through Quran completions with personal goals and streaks.",
   },
   {
-    icon: "\u{1F552}",
+    icon: Bell,
     title: "Prayer Reminders",
     desc: "Get timely notifications so you never miss a prayer, with adjustable reminder settings.",
   },
   {
-    icon: "\u{1F4C5}",
+    icon: Calendar,
     title: "Islamic Calendar",
     desc: "Hijri calendar with Ramadan special events and Islamic dates throughout the year.",
   },
@@ -80,8 +91,8 @@ export default function Features() {
           {features.map((feature, i) => (
             <Reveal key={feature.title} delay={(i % 3) * 120}>
               <div className="card-hover group h-full bg-white dark:bg-gray-800 p-7 rounded-3xl shadow-lg shadow-gray-900/5 dark:shadow-black/20 border border-gray-100 dark:border-gray-700 hover-lift">
-                <div className="card-icon inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-primary-50 dark:bg-primary-900/30 text-2xl mb-5">
-                  {feature.icon}
+                <div className="card-icon inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-primary-50 dark:bg-primary-900/30 text-primary-600 dark:text-primary-300 mb-5">
+                  <feature.icon size={24} aria-hidden="true" />
                 </div>
                 <h2 className="text-lg font-bold text-gray-900 dark:text-white">{feature.title}</h2>
                 <p className="mt-2 text-sm text-gray-600 dark:text-gray-400 leading-relaxed">{feature.desc}</p>

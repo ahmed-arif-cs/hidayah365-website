@@ -1,20 +1,21 @@
 import Reveal from "@/components/Reveal";
 import ContactForm from "@/components/ContactForm";
+import { Mail, MessageCircle, Target } from "lucide-react";
 
 const contactInfo = [
   {
-    icon: "\u{1F4E7}",
+    icon: Mail,
     label: "Email",
     value: "agcompanies.official@gmail.com",
     href: "mailto:agcompanies.official@gmail.com",
   },
   {
-    icon: "\u{1F4AC}",
+    icon: MessageCircle,
     label: "Response time",
     value: "We reply within 2–3 business days.",
   },
   {
-    icon: "\u{1F3AF}",
+    icon: Target,
     label: "Focus",
     value: "Support, feedback and partnership enquiries.",
   },
@@ -52,8 +53,8 @@ export default function Contact() {
             {contactInfo.map((item, i) => (
               <Reveal key={item.label} delay={i * 110}>
                 <div className="card-hover flex items-start gap-4 bg-white dark:bg-gray-800 rounded-2xl border border-gray-100 dark:border-gray-700 p-5 hover-lift-sm">
-                  <span className="card-icon inline-flex items-center justify-center w-11 h-11 rounded-xl bg-primary-50 dark:bg-primary-900/30 text-xl">
-                    {item.icon}
+                  <span className="card-icon inline-flex items-center justify-center w-11 h-11 rounded-xl bg-primary-50 dark:bg-primary-900/30 text-primary-600 dark:text-primary-300">
+                    <item.icon size={20} aria-hidden="true" />
                   </span>
                   <div>
                     <div className="text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400">

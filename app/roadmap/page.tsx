@@ -1,5 +1,5 @@
 import Reveal from "@/components/Reveal";
-import { Check, ArrowRight } from "lucide-react";
+import { Check } from "lucide-react";
 
 const roadmap = [
   {

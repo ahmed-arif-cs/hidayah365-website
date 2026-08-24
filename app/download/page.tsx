@@ -1,30 +1,31 @@
 import Reveal from "@/components/Reveal";
 import GooglePlayBadge from "@/components/GooglePlayBadge";
 import NotifyForm from "@/components/NotifyForm";
+import { ShieldCheck, Languages, Sparkles, Smartphone, Apple, Globe } from "lucide-react";
 import { ArrowRight } from "lucide-react";
 
 const steps = [
   {
-    icon: "\u{1F6E1}\uFE0F",
+    icon: ShieldCheck,
     title: "1. Install from the Play Store",
     desc: "Once released, HIDAYAH365 will be available free on Google Play — one tap to install.",
   },
   {
-    icon: "\u{1F4C1}",
+    icon: Languages,
     title: "2. Set your language",
     desc: "Choose English or Urdu, then set your location for accurate prayer times and Qibla.",
   },
   {
-    icon: "\u{1F5A5}",
+    icon: Sparkles,
     title: "3. Start exploring",
     desc: "Read Quran, track prayers, make duas and build your daily routine with guidance at your side.",
   },
 ];
 
 const platforms = [
-  { name: "Android", icon: "\u{1F4F1}", note: "Primary platform — Android 7.0 and above" },
-  { name: "iOS", icon: "\u{1F34E}", note: "Planned for a future release" },
-  { name: "Web", icon: "\u{1F310}", note: "Companion preview site — this website" },
+  { name: "Android", icon: Smartphone, note: "Primary platform — Android 7.0 and above" },
+  { name: "iOS", icon: Apple, note: "Planned for a future release" },
+  { name: "Web", icon: Globe, note: "Companion preview site — this website" },
 ];
 
 export default function Download() {
@@ -65,7 +66,9 @@ export default function Download() {
           {platforms.map((p, i) => (
             <Reveal key={p.name} delay={i * 120}>
               <div className="card-hover h-full bg-white dark:bg-gray-800 rounded-3xl border border-gray-100 dark:border-gray-700 p-6 text-center hover-lift">
-                <div className="card-icon text-4xl mb-3">{p.icon}</div>
+                <div className="card-icon flex items-center justify-center text-primary-600 dark:text-primary-300 mb-3">
+                  <p.icon size={36} aria-hidden="true" />
+                </div>
                 <h3 className="text-lg font-bold text-gray-900 dark:text-white">{p.name}</h3>
                 <p className="mt-1.5 text-sm text-gray-500 dark:text-gray-400">{p.note}</p>
               </div>
@@ -83,8 +86,11 @@ export default function Download() {
           {steps.map((step, i) => (
             <Reveal key={step.title} delay={i * 130}>
               <div className="relative h-full bg-white dark:bg-gray-800 rounded-3xl border border-gray-100 dark:border-gray-700 p-7 hover-lift">
-                <div className="text-4xl animate-float" style={{ animationDelay: `${i * 0.6}s` }}>
-                  {step.icon}
+                <div
+                  className="inline-flex items-center justify-center text-primary-600 dark:text-primary-300 animate-float"
+                  style={{ animationDelay: `${i * 0.6}s` }}
+                >
+                  <step.icon size={36} aria-hidden="true" />
                 </div>
                 <h3 className="mt-4 font-bold text-gray-900 dark:text-white">{step.title}</h3>
                 <p className="mt-2 text-sm text-gray-600 dark:text-gray-400 leading-relaxed">{step.desc}</p>

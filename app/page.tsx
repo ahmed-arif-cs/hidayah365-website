@@ -1,21 +1,22 @@
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import GooglePlayBadge from "@/components/GooglePlayBadge";
+import { BookOpen, Landmark, HandHeart, Download } from "lucide-react";
 import { ArrowRight } from "lucide-react";
 
 const highlights = [
   {
-    icon: "\u{1F4D6}",
+    icon: BookOpen,
     title: "Quran & Tafseer",
     desc: "Read the Holy Quran with translations, tafseer, and audio recitations.",
   },
   {
-    icon: "\u{1F54C}",
+    icon: Landmark,
     title: "Prayer Times & Qibla",
     desc: "Accurate prayer times and Qibla direction based on your location.",
   },
   {
-    icon: "\u{1F932}",
+    icon: HandHeart,
     title: "Duas & Dhikr",
     desc: "Comprehensive collection of duas and dhikr for daily life.",
   },
@@ -68,7 +69,7 @@ export default function Home() {
               href="/download"
               className="ripple-btn group inline-flex items-center gap-2 bg-primary-600 text-white px-8 py-3.5 rounded-full font-semibold shadow-lg shadow-primary-600/30 hover:bg-primary-700 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-primary-600/40 animate-zoom-in"
             >
-              <span className="group-hover:animate-pulse text-lg">{"\u{1F4F2}"}</span>
+              <Download size={18} className="group-hover:animate-pulse" aria-hidden="true" />
               Download Now
             </Link>
             <Link
@@ -120,8 +121,8 @@ export default function Home() {
           {highlights.map((item, i) => (
             <Reveal key={item.title} delay={i * 150}>
               <div className="card-hover group h-full bg-white dark:bg-gray-800 p-8 rounded-3xl shadow-xl shadow-gray-900/5 dark:shadow-black/20 border border-gray-100 dark:border-gray-700 hover-lift">
-                <div className="card-icon inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-primary-50 dark:bg-primary-900/30 text-3xl mb-5">
-                  {item.icon}
+                <div className="card-icon inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-primary-50 dark:bg-primary-900/30 text-primary-600 dark:text-primary-300 mb-5">
+                  <item.icon size={28} aria-hidden="true" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">{item.title}</h3>
                 <p className="text-gray-600 dark:text-gray-400 leading-relaxed">{item.desc}</p>
