@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useAppContext } from "./AppProvider";
+import { Sun, Moon, Languages } from "lucide-react";
 
 const navItems = [
   { href: "/", label: "Home", labelUr: "ہوم" },
@@ -79,7 +80,7 @@ export default function Navbar() {
               className="flex items-center gap-1 px-3 py-1.5 rounded-full border border-gray-200 dark:border-gray-700 text-sm font-semibold text-gray-700 dark:text-gray-200 hover:border-primary-400 dark:hover:border-primary-500 transition-all duration-300 hover:scale-105"
               aria-label="Toggle language"
             >
-              <span>{language === "en" ? "🇬🇧" : "🇵🇰"}</span>
+              <Languages size={16} aria-hidden="true" />
               <span>{language === "en" ? "English" : "اردو"}</span>
             </button>
 
@@ -88,7 +89,11 @@ export default function Navbar() {
               className="flex items-center justify-center w-9 h-9 text-lg rounded-full border border-gray-200 dark:border-gray-700 hover:border-primary-400 dark:hover:border-primary-500 transition-all duration-300 hover:rotate-45 hover:scale-105"
               aria-label="Toggle theme"
             >
-              {theme === "dark" ? "☀️" : "🌙"}
+              {theme === "dark" ? (
+                <Sun size={18} aria-hidden="true" />
+              ) : (
+                <Moon size={18} aria-hidden="true" />
+              )}
             </button>
 
             <button

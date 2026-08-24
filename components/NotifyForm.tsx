@@ -2,6 +2,7 @@
 
 import { useState, type FormEvent } from "react";
 import { useAppContext } from "./AppProvider";
+import { Check } from "lucide-react";
 
 const text = {
   en: {
@@ -65,7 +66,7 @@ export default function NotifyForm() {
   if (status === "success") {
     return (
       <p className="mt-6 inline-flex items-center gap-2 rounded-xl bg-primary-50 dark:bg-primary-900/30 px-5 py-3 text-sm font-medium text-primary-700 dark:text-primary-300">
-        <span aria-hidden="true">{"\u2713"}</span> {t.success}
+        <Check size={16} aria-hidden="true" /> {t.success}
       </p>
     );
   }

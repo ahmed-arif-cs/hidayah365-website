@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
+import { Send } from "lucide-react";
 
 const CONTACT_EMAIL = "agcompanies.official@gmail.com";
 
@@ -197,7 +198,13 @@ export default function ContactForm() {
           disabled={status === "sending"}
           className="ripple-btn w-full rounded-full bg-primary-600 py-3.5 font-semibold text-white shadow-lg shadow-primary-600/25 hover:bg-primary-700 hover:-translate-y-0.5 transition-all duration-300 disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:translate-y-0"
         >
-          {status === "sending" ? "Sending…" : "Send message ✉️"}
+          {status === "sending" ? (
+            "Sending…"
+          ) : (
+            <span className="inline-flex items-center justify-center gap-2">
+              Send message <Send size={16} aria-hidden="true" />
+            </span>
+          )}
         </button>
       </div>
     </form>

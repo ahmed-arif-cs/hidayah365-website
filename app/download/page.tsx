@@ -1,6 +1,7 @@
 import Reveal from "@/components/Reveal";
 import GooglePlayBadge from "@/components/GooglePlayBadge";
 import NotifyForm from "@/components/NotifyForm";
+import { ArrowRight } from "lucide-react";
 
 const steps = [
   {
@@ -106,7 +107,9 @@ export default function Download() {
               href="/contact"
               className="mt-6 inline-flex items-center gap-2 text-sm text-primary-600 dark:text-primary-400 font-semibold hover:underline"
             >
-              Or contact the team directly →
+              <span className="inline-flex items-center gap-2">
+                Or contact the team directly <ArrowRight size={14} aria-hidden="true" />
+              </span>
             </a>
           </div>
         </Reveal>

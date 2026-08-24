@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import GooglePlayBadge from "@/components/GooglePlayBadge";
+import { ArrowRight } from "lucide-react";
 
 const highlights = [
   {
@@ -74,7 +75,9 @@ export default function Home() {
               href="/features"
               className="inline-flex items-center gap-2 border-2 border-primary-600 text-primary-600 dark:text-primary-300 dark:border-primary-400 px-8 py-3.5 rounded-full font-semibold hover:bg-primary-50 dark:hover:bg-primary-900/30 transition-all duration-300 hover:-translate-y-1 animate-zoom-in delay-100"
             >
-              View Features →
+              <span className="inline-flex items-center gap-2">
+                View Features <ArrowRight size={16} aria-hidden="true" />
+              </span>
             </Link>
           </div>
         </Reveal>

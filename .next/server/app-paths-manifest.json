@@ -1,0 +1,12 @@
+{
+  "/_global-error/page": "app/_global-error/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/api/contact/route": "app/api/contact/route.js",
+  "/api/notify/route": "app/api/notify/route.js",
+  "/contact/page": "app/contact/page.js",
+  "/download/page": "app/download/page.js",
+  "/features/page": "app/features/page.js",
+  "/page": "app/page.js",
+  "/privacy/page": "app/privacy/page.js",
+  "/roadmap/page": "app/roadmap/page.js"
+}

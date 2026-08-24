@@ -1,4 +1,5 @@
 import Reveal from "@/components/Reveal";
+import { Check, ArrowRight } from "lucide-react";
 
 const roadmap = [
   {
@@ -111,7 +112,7 @@ export default function Roadmap() {
                 "Working prayer reminders with Quran and Hadith verses included",
               ].map((it) => (
                 <li key={it} className="flex items-start gap-2 text-sm text-primary-50">
-                  <span className="mt-0.5 text-gold-400">{"\u2713"}</span>
+                  <Check size={16} className="mt-0.5 shrink-0 text-gold-400" aria-hidden="true" />
                   {it}
                 </li>
               ))}
@@ -140,7 +141,7 @@ export default function Roadmap() {
                   <ul className="mt-4 space-y-2">
                     {item.items.map((li) => (
                       <li key={li} className="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-400">
-                        <span className="mt-0.5 text-gold-500">{"\u2713"}</span>
+                        <Check size={16} className="mt-0.5 shrink-0 text-gold-500" aria-hidden="true" />
                         {li}
                       </li>
                     ))}
