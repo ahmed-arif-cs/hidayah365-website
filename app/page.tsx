@@ -141,7 +141,7 @@ export default function Home() {
               Begin your journey today
             </h2>
             <p className="mt-4 text-lg text-white/80 max-w-xl mx-auto">
-              HIDAYAH365 is being prepared for release on the Google Play Store.
+              HIDAYAH365 is now live on Google Play. Free to download, no account needed.
             </p>
             <div className="mt-8 flex flex-col items-center">
               <GooglePlayBadge className="animate-bounce-slow" />
